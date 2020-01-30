@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send('Gyökér');
 });
 
-mongoose.connect('mongodb://testboy:rhino94@ds155396.mlab.com:55396/rest',
+mongoose.connect(process.env.DB_CONNECTION,
     { useNewUrlParser: true },
   () => console.log('Connected to DB!')
 );
